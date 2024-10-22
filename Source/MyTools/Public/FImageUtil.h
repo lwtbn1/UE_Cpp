@@ -12,5 +12,5 @@ class MYTOOLS_API FImageUtil
 public:
 	FImageUtil();
 	~FImageUtil();
-	static void Copy();
+	void Copy();
 };

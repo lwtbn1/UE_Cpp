@@ -10,7 +10,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(BlueprintType)
 class UE_CPP_API UFResData : public UObject
 {
 	GENERATED_BODY()
