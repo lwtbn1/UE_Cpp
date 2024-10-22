@@ -23,7 +23,7 @@ class UE_CPP_API UMyUObject : public UObject
 	GENERATED_BODY()
 public:
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category=stats)
-	int Hp;
+	int Hp = 100;
 	UPROPERTY(EditAnywhere,Category=stats)
 	float Speed;
 };
