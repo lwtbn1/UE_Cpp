@@ -22,6 +22,8 @@ class UE_CPP_API UMyUObject : public UObject
 {
 	GENERATED_BODY()
 public:
+	UMyUObject();
+	virtual ~UMyUObject() override;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category=stats)
 	int Hp = 100;
 	UPROPERTY(EditAnywhere,Category=stats)

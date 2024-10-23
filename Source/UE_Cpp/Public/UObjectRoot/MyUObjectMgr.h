@@ -7,6 +7,8 @@
 #include "GameFramework/Actor.h"
 #include "MyUObjectMgr.generated.h"
 
+class UMyUObjectParent;
+
 UCLASS()
 class UE_CPP_API AMyUObjectMgr : public AActor
 {
@@ -17,9 +19,18 @@ public:
 	AMyUObjectMgr();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Stats)
 	TSubclassOf<UMyUObject> MyObject1;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite , Category=Stats)
 	TSubclassOf<UMyUObject> MyObject2;
 
+	UPROPERTY(EditAnywhere, Category=Config)
+	float DestroyDelayTime = 3;
+
+	float GCTime;
+	
+	UPROPERTY(VisibleAnywhere,Category=Cls)
+	UMyUObjectParent* CreatedMyUObjByDefault;
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Stats, meta=(MetaClass="GameMode"))
 	FSoftClassPath ClassReference;
 
